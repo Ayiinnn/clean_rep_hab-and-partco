@@ -1,0 +1,35 @@
+dev_output/
+datasets/
+.DS_Store
+
+# python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# logs / outputs
+logs/
+dev_output/
+dev_outputs/
+outputs/
+runs/
+wandb/
+
+# data / checkpoints / weights
+datasets/
+pretrained/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# backups / temp scripts
+*.bak*
+wait_idle_*.sh

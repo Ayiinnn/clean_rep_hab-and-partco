@@ -1,0 +1,36 @@
+Using seed 1 for model training
+Experiment saved to: dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)
+['simgcd']
+Namespace(batch_size=128, num_workers=8, eval_funcs=['v2'], warmup_model_dir=None, dataset_name='cub', prop_train_labels=0.5, use_ssb_splits=True, grad_from_block=11, lr=0.1, gamma=0.1, momentum=0.9, weight_decay=5e-05, epochs=200, exp_root='dev_outputs', transform='imagenet', sup_weight=0.35, n_views=2, seed=1, memax_weight=2, warmup_teacher_temp=0.07, teacher_temp=0.04, warmup_teacher_temp_epochs=30, fp16=False, print_freq=10, exp_name='cub_partco_simgcd', image_size=224, train_classes=[150, 70, 34, 178, 199, 131, 129, 147, 134, 11, 26, 93, 95, 121, 123, 99, 149, 167, 18, 31, 69, 198, 116, 158, 126, 17, 5, 179, 111, 163, 184, 81, 174, 42, 53, 89, 77, 55, 23, 48, 43, 44, 56, 28, 193, 143, 0, 176, 84, 15, 38, 154, 141, 190, 172, 124, 189, 19, 80, 157, 12, 9, 79, 30, 94, 67, 197, 97, 168, 137, 119, 76, 98, 88, 40, 106, 171, 87, 166, 186, 27, 51, 144, 135, 161, 64, 177, 7, 146, 61, 50, 162, 133, 82, 39, 74, 72, 91, 196, 136], unlabeled_classes=[29, 110, 3, 8, 13, 58, 142, 25, 145, 63, 59, 65, 24, 140, 120, 32, 114, 107, 160, 130, 118, 101, 115, 128, 117, 71, 156, 112, 36, 122, 104, 102, 90, 125, 152, 195, 132, 83, 22, 192, 153, 175, 191, 155, 49, 194, 73, 66, 170, 151, 169, 96, 103, 37, 181, 127, 78, 21, 10, 164, 62, 2, 183, 85, 45, 60, 92, 185, 20, 159, 173, 148, 1, 57, 113, 165, 52, 109, 14, 4, 180, 6, 182, 68, 33, 108, 46, 35, 75, 188, 187, 100, 47, 105, 41, 86, 16, 54, 139, 138], num_labeled_classes=100, num_unlabeled_classes=100, logger=<loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=10, sink='dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)/log.txt')]>, log_dir='dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)', model_dir='dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)/checkpoints', model_path='dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)/checkpoints/model.pt')
+2026-08-09 03:00:56.091 | INFO     | __main__:<module>:267 - Using evaluation function v2 to print results
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/root/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+2026-08-09 03:00:57.706 | INFO     | __main__:<module>:304 - model build
+Files already downloaded and verified
+2026-08-09 03:01:08.909 | INFO     | __main__:train:147 - Epoch: [0][0/46]	 loss 15.21011	 cls_loss: 5.3075 cluster_loss: 5.2041 sup_con_loss: 1.8736 contrastive_loss: 4.8955 patch_sup_con_loss: 17.5201 
+2026-08-09 03:01:28.830 | INFO     | __main__:train:147 - Epoch: [0][10/46]	 loss 12.92317	 cls_loss: 3.0268 cluster_loss: 4.0979 sup_con_loss: 1.3384 contrastive_loss: 4.7657 patch_sup_con_loss: 16.0970 
+2026-08-09 03:01:48.812 | INFO     | __main__:train:147 - Epoch: [0][20/46]	 loss 11.07384	 cls_loss: 1.4971 cluster_loss: 3.0630 sup_con_loss: 0.9341 contrastive_loss: 4.6665 patch_sup_con_loss: 14.8537 
+2026-08-09 03:02:08.819 | INFO     | __main__:train:147 - Epoch: [0][30/46]	 loss 10.76713	 cls_loss: 1.1117 cluster_loss: 2.7003 sup_con_loss: 0.9204 contrastive_loss: 4.6598 patch_sup_con_loss: 15.0623 
+2026-08-09 03:02:28.901 | INFO     | __main__:train:147 - Epoch: [0][40/46]	 loss 10.82088	 cls_loss: 1.0134 cluster_loss: 2.5981 sup_con_loss: 1.1859 contrastive_loss: 4.6569 patch_sup_con_loss: 15.2440 
+2026-08-09 03:02:38.795 | INFO     | __main__:train:150 - Train Epoch: 0 Avg Loss: 11.7585 
+2026-08-09 03:02:38.795 | INFO     | __main__:train:152 - Testing on unlabelled examples in the training data...
+  0%|          | 0/18 [00:00<?, ?it/s]  6%|▌         | 1/18 [00:03<00:51,  3.06s/it] 11%|█         | 2/18 [00:04<00:30,  1.90s/it] 17%|█▋        | 3/18 [00:05<00:22,  1.53s/it] 22%|██▏       | 4/18 [00:06<00:18,  1.36s/it] 28%|██▊       | 5/18 [00:07<00:16,  1.26s/it] 33%|███▎      | 6/18 [00:08<00:14,  1.20s/it] 39%|███▉      | 7/18 [00:09<00:12,  1.17s/it] 44%|████▍     | 8/18 [00:10<00:11,  1.14s/it] 50%|█████     | 9/18 [00:11<00:10,  1.13s/it] 56%|█████▌    | 10/18 [00:12<00:08,  1.12s/it] 61%|██████    | 11/18 [00:13<00:07,  1.11s/it] 67%|██████▋   | 12/18 [00:15<00:06,  1.10s/it] 72%|███████▏  | 13/18 [00:16<00:05,  1.10s/it] 78%|███████▊  | 14/18 [00:17<00:04,  1.10s/it] 83%|████████▎ | 15/18 [00:18<00:03,  1.10s/it] 89%|████████▉ | 16/18 [00:19<00:02,  1.09s/it] 94%|█████████▍| 17/18 [00:20<00:01,  1.09s/it]100%|██████████| 18/18 [00:21<00:00,  1.01it/s]100%|██████████| 18/18 [00:21<00:00,  1.19s/it]
+2026-08-09 03:03:00.157 | INFO     | __main__:train:159 - Train Accuracies: All 0.3734 | Old 0.4350 | New 0.3427
+2026-08-09 03:03:00.720 | INFO     | __main__:train:172 - model saved to dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)/checkpoints/model.pt.
+2026-08-09 03:03:00.720 | INFO     | __main__:train:177 - Best ACC on old Classes on unlabelled train set: 0.4350...
+2026-08-09 03:03:00.720 | INFO     | __main__:train:178 - Best Train Accuracies: All 0.3734 | Old 0.4350 | New 0.3427
+2026-08-09 03:03:01.258 | INFO     | __main__:train:181 - model saved to dev_outputs/simgcd/log/cub_partco_simgcd_(09.08.2026_|_56.087)/checkpoints/model_best.pt.
+2026-08-09 03:03:01.259 | INFO     | __main__:train:190 - Exp Name: cub_partco_simgcd
+2026-08-09 03:03:01.259 | INFO     | __main__:train:191 - Metrics with best model on test set: All: 0.3734 Old: 0.4350 New: 0.3427
+2026-08-09 03:03:05.474 | INFO     | __main__:train:147 - Epoch: [1][0/46]	 loss 10.65797	 cls_loss: 0.9879 cluster_loss: 2.4539 sup_con_loss: 1.1641 contrastive_loss: 4.6622 patch_sup_con_loss: 15.0838 
+2026-08-09 03:03:25.611 | INFO     | __main__:train:147 - Epoch: [1][10/46]	 loss 10.29396	 cls_loss: 0.8136 cluster_loss: 2.3506 sup_con_loss: 0.8266 contrastive_loss: 4.6542 patch_sup_con_loss: 14.7622 
+2026-08-09 03:03:45.836 | INFO     | __main__:train:147 - Epoch: [1][20/46]	 loss 10.29105	 cls_loss: 0.8458 cluster_loss: 2.1565 sup_con_loss: 0.9386 contrastive_loss: 4.6382 patch_sup_con_loss: 14.9999 
+2026-08-09 03:04:06.005 | INFO     | __main__:train:147 - Epoch: [1][30/46]	 loss 9.98684	 cls_loss: 0.7228 cluster_loss: 2.2145 sup_con_loss: 0.6707 contrastive_loss: 4.6406 patch_sup_con_loss: 14.4093 
+2026-08-09 03:04:26.285 | INFO     | __main__:train:147 - Epoch: [1][40/46]	 loss 10.27290	 cls_loss: 0.6745 cluster_loss: 2.1839 sup_con_loss: 0.9510 contrastive_loss: 4.6357 patch_sup_con_loss: 15.0606 
+2026-08-09 03:04:36.303 | INFO     | __main__:train:150 - Train Epoch: 1 Avg Loss: 10.3639 
+2026-08-09 03:04:36.303 | INFO     | __main__:train:152 - Testing on unlabelled examples in the training data...
+  0%|          | 0/18 [00:00<?, ?it/s]
