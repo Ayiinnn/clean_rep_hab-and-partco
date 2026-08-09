@@ -1,0 +1,9 @@
+2026-08-09 11:58:54.362 | INFO     | __main__:<module>:481 - Using evaluation function ['v2', 'v2b'] to print results
+2026-08-09 11:58:55.808 | INFO     | __main__:<module>:525 - model build
+2026-08-09 11:59:07.687 | INFO     | __main__:train:332 - Epoch: [0][0/46]	 loss 13.78714	 cls_loss: 5.3745 cluster_loss: 5.2280 distance sup_con_loss: 4.2011 distance contrastive_loss: 3.1587 angle sup_con_loss: 2.2479 angle contrastive_loss: 3.5361 patch_sup_con_loss: 15.4869 
+2026-08-09 11:59:28.044 | INFO     | __main__:train:332 - Epoch: [0][10/46]	 loss 10.48998	 cls_loss: 1.3866 cluster_loss: 2.5506 distance sup_con_loss: 4.2907 distance contrastive_loss: 3.3352 angle sup_con_loss: 1.8850 angle contrastive_loss: 3.8907 patch_sup_con_loss: 14.7304 
+2026-08-09 11:59:48.485 | INFO     | __main__:train:332 - Epoch: [0][20/46]	 loss 9.79973	 cls_loss: 0.7657 cluster_loss: 2.0293 distance sup_con_loss: 3.8338 distance contrastive_loss: 3.2807 angle sup_con_loss: 1.6976 angle contrastive_loss: 3.8023 patch_sup_con_loss: 14.7000 
+2026-08-09 12:00:08.951 | INFO     | __main__:train:332 - Epoch: [0][30/46]	 loss 9.52542	 cls_loss: 0.9157 cluster_loss: 1.9258 distance sup_con_loss: 2.8203 distance contrastive_loss: 3.1578 angle sup_con_loss: 1.4268 angle contrastive_loss: 3.6312 patch_sup_con_loss: 14.5503 
+2026-08-09 12:00:29.563 | INFO     | __main__:train:332 - Epoch: [0][40/46]	 loss 9.03440	 cls_loss: 0.4681 cluster_loss: 1.6647 distance sup_con_loss: 2.7196 distance contrastive_loss: 3.0826 angle sup_con_loss: 1.2526 angle contrastive_loss: 3.5249 patch_sup_con_loss: 14.4508 
+2026-08-09 12:00:39.764 | INFO     | __main__:train:334 - Train Epoch: 0 Avg Loss: 10.0473 
+2026-08-09 12:00:44.214 | INFO     | __main__:train:332 - Epoch: [1][0/46]	 loss 8.75633	 cls_loss: 0.5078 cluster_loss: 1.5954 distance sup_con_loss: 1.5434 distance contrastive_loss: 3.0440 angle sup_con_loss: 0.6702 angle contrastive_loss: 3.4994 patch_sup_con_loss: 14.3779 
