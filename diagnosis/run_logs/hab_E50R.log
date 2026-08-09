@@ -1,0 +1,323 @@
+== [hab] repo=/data/projects/clean_projects/hab  entry=train/train_hab_v2.py
+Namespace(batch_size=128, c=0.1, cr=1.2, dataset_name='cub', deterministic=True, epochs=200, eval_funcs=['v2', 'v2b'], eval_model_path=None, eval_only=False, exp_name='DIAG_PART_SIGNAL_E50R', exp_root='/data/projects/clean_projects/hab/dev_outputs', fp16=False, gamma=0.1, grad_from_block=11, hyper_end_epoch=200, hyper_max_weight=1.0, hyper_start_epoch=0, hyper_temp_scale=0.4, lr=0.1, memax_weight=1.0, model_name='v2', momentum=0.9, n_views=2, num_workers=8, part_temp=0.028000000000000004, part_unsup_scale=1.0, print_freq=10, prop_train_labels=0.5, riemannian=False, seed=0, strict_deterministic=False, sup_weight=0.35, teacher_temp=0.04, transform='imagenet', use_ssb_splits=True, warmup_model_dir=None, warmup_teacher_temp=0.07, warmup_teacher_temp_epochs=30, weight_decay=5e-05)
+[determinism] use_deterministic_algorithms(True, warn_only=True) | CUBLAS_WORKSPACE_CONFIG=:4096:8
+Experiment saved to: /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)
+['HypSimGCD_cub']
+Namespace(batch_size=128, c=0.1, cr=1.2, dataset_name='cub', deterministic=True, epochs=200, eval_funcs=['v2', 'v2b'], eval_model_path=None, eval_only=False, exp_name='DIAG_PART_SIGNAL_E50R', exp_root='/data/projects/clean_projects/hab/dev_outputs', fp16=False, gamma=0.1, grad_from_block=11, hyper_end_epoch=200, hyper_max_weight=1.0, hyper_start_epoch=0, hyper_temp_scale=0.4, image_size=224, log_dir='/data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)', logger=<loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=10, sink='/data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/log.txt')]>, lr=0.1, memax_weight=1.0, model_dir='/data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints', model_name='v2', model_path='/data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt', momentum=0.9, n_views=2, num_labeled_classes=100, num_unlabeled_classes=100, num_workers=8, part_temp=0.028000000000000004, part_unsup_scale=1.0, print_freq=10, prop_train_labels=0.5, riemannian=False, seed=0, strict_deterministic=False, sup_weight=0.35, teacher_temp=0.04, train_classes=[150, 70, 34, 178, 199, 131, 129, 147, 134, 11, 26, 93, 95, 121, 123, 99, 149, 167, 18, 31, 69, 198, 116, 158, 126, 17, 5, 179, 111, 163, 184, 81, 174, 42, 53, 89, 77, 55, 23, 48, 43, 44, 56, 28, 193, 143, 0, 176, 84, 15, 38, 154, 141, 190, 172, 124, 189, 19, 80, 157, 12, 9, 79, 30, 94, 67, 197, 97, 168, 137, 119, 76, 98, 88, 40, 106, 171, 87, 166, 186, 27, 51, 144, 135, 161, 64, 177, 7, 146, 61, 50, 162, 133, 82, 39, 74, 72, 91, 196, 136], transform='imagenet', unlabeled_classes=[29, 110, 3, 8, 13, 58, 142, 25, 145, 63, 59, 65, 24, 140, 120, 32, 114, 107, 160, 130, 118, 101, 115, 128, 117, 71, 156, 112, 36, 122, 104, 102, 90, 125, 152, 195, 132, 83, 22, 192, 153, 175, 191, 155, 49, 194, 73, 66, 170, 151, 169, 96, 103, 37, 181, 127, 78, 21, 10, 164, 62, 2, 183, 85, 45, 60, 92, 185, 20, 159, 173, 148, 1, 57, 113, 165, 52, 109, 14, 4, 180, 6, 182, 68, 33, 108, 46, 35, 75, 188, 187, 100, 47, 105, 41, 86, 16, 54, 139, 138], use_ssb_splits=True, warmup_model_dir=None, warmup_teacher_temp=0.07, warmup_teacher_temp_epochs=30, weight_decay=5e-05)
+2026-08-10 00:21:42.399 | INFO     | __main__:<module>:525 - model build
+Files already downloaded and verified
+== Setup complete: num_labeled=100 num_unlabeled=100 seed=0 epochs=200 warmup=30
+== Hook target: HypLinear (output mode: tensor)
+2026-08-10 00:21:54.294 | INFO     | __main__:train:332 - Epoch: [0][0/46]	 loss 8.36672	 cls_loss: 5.3745 cluster_loss: 5.2280 distance sup_con_loss: 4.2011 distance contrastive_loss: 3.1587 angle sup_con_loss: 2.2479 angle contrastive_loss: 3.5361 patch_sup_con_loss: 0.0000 
+2026-08-10 00:22:12.452 | INFO     | __main__:train:332 - Epoch: [0][10/46]	 loss 5.71937	 cls_loss: 1.7989 cluster_loss: 2.6893 distance sup_con_loss: 4.3859 distance contrastive_loss: 3.4665 angle sup_con_loss: 2.1349 angle contrastive_loss: 3.9880 patch_sup_con_loss: 0.0000 
+2026-08-10 00:22:30.754 | INFO     | __main__:train:332 - Epoch: [0][20/46]	 loss 4.64875	 cls_loss: 0.8297 cluster_loss: 2.0591 distance sup_con_loss: 3.6828 distance contrastive_loss: 3.2516 angle sup_con_loss: 1.6626 angle contrastive_loss: 3.7479 patch_sup_con_loss: 0.0000 
+2026-08-10 00:22:49.118 | INFO     | __main__:train:332 - Epoch: [0][30/46]	 loss 4.53934	 cls_loss: 0.9561 cluster_loss: 2.0034 distance sup_con_loss: 2.9144 distance contrastive_loss: 3.2195 angle sup_con_loss: 1.4931 angle contrastive_loss: 3.6598 patch_sup_con_loss: 0.0000 
+2026-08-10 00:23:07.495 | INFO     | __main__:train:332 - Epoch: [0][40/46]	 loss 4.04357	 cls_loss: 0.4830 cluster_loss: 1.7824 distance sup_con_loss: 2.4249 distance contrastive_loss: 3.1328 angle sup_con_loss: 1.1236 angle contrastive_loss: 3.5720 patch_sup_con_loss: 0.0000 
+[E000] pre  n=2944  conf 0.375(0.07/0.77) H=2.89 effK=  18.0 acc_H 0.305/0.406/0.255 dir_old 0.632
+        pair inst=19539  pairs=587887    pos= 2.65% prec 0.132 base 0.0058 lift   22.9 rec 0.608 pconf 0.298/0.227
+        gate thr=0.80 pass=  9.0% prec 0.426 pos= 4.20% | logit |z|max 0.64 std 0.14 L2 2.03 range 1.00
+2026-08-10 00:23:16.614 | INFO     | __main__:train:334 - Train Epoch: 0 Avg Loss: 5.1345 
+2026-08-10 00:23:20.815 | INFO     | __main__:train:332 - Epoch: [1][0/46]	 loss 3.85480	 cls_loss: 0.6489 cluster_loss: 1.6466 distance sup_con_loss: 1.5251 distance contrastive_loss: 3.0781 angle sup_con_loss: 0.7552 angle contrastive_loss: 3.5282 patch_sup_con_loss: 0.0000 
+2026-08-10 00:23:39.149 | INFO     | __main__:train:332 - Epoch: [1][10/46]	 loss 3.89916	 cls_loss: 0.5706 cluster_loss: 1.5671 distance sup_con_loss: 2.6749 distance contrastive_loss: 3.0025 angle sup_con_loss: 1.1746 angle contrastive_loss: 3.4886 patch_sup_con_loss: 0.0000 
+2026-08-10 00:23:57.510 | INFO     | __main__:train:332 - Epoch: [1][20/46]	 loss 3.95915	 cls_loss: 0.5574 cluster_loss: 1.6135 distance sup_con_loss: 3.1181 distance contrastive_loss: 2.9949 angle sup_con_loss: 1.3293 angle contrastive_loss: 3.4565 patch_sup_con_loss: 0.0000 
+2026-08-10 00:24:15.865 | INFO     | __main__:train:332 - Epoch: [1][30/46]	 loss 3.72043	 cls_loss: 0.4168 cluster_loss: 1.5929 distance sup_con_loss: 1.9421 distance contrastive_loss: 2.9675 angle sup_con_loss: 0.8094 angle contrastive_loss: 3.4695 patch_sup_con_loss: 0.0000 
+2026-08-10 00:24:34.219 | INFO     | __main__:train:332 - Epoch: [1][40/46]	 loss 3.74173	 cls_loss: 0.4113 cluster_loss: 1.5670 distance sup_con_loss: 2.6187 distance contrastive_loss: 2.9114 angle sup_con_loss: 1.0232 angle contrastive_loss: 3.4135 patch_sup_con_loss: 0.0000 
+[E001] pre  n=3018  conf 0.510(0.15/0.91) H=2.19 effK=   8.9 acc_H 0.394/0.470/0.353 dir_old 0.836
+        pair inst=20054  pairs=619748    pos= 1.58% prec 0.230 base 0.0058 lift   39.3 rec 0.623 pconf 0.487/0.373
+        gate thr=0.80 pass= 19.6% prec 0.560 pos= 2.73% | logit |z|max 0.80 std 0.18 L2 2.55 range 1.30
+2026-08-10 00:24:43.312 | INFO     | __main__:train:334 - Train Epoch: 1 Avg Loss: 3.9228 
+2026-08-10 00:24:43.312 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:25:05.094 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 1, Train ACC Unlabelled_v2: All 0.4204 | Old 0.4316 | New 0.4147
+2026-08-10 00:25:05.101 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 1, Train ACC Unlabelled_v2b: All 0.4246 | Old 0.4347 | New 0.4146
+2026-08-10 00:25:05.118 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:25:32.544 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 1, Test ACC_v2: All 0.4572 | Old 0.7521 | New 0.1649
+2026-08-10 00:25:32.552 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 1, Test ACC_v2b: All 0.4529 | Old 0.7430 | New 0.1629
+2026-08-10 00:25:32.571 | INFO     | __main__:train:345 - Train Accuracies: All 0.4204 | Old 0.4316 | New 0.4147
+2026-08-10 00:25:32.571 | INFO     | __main__:train:346 - Test Accuracies: All 0.4572 | Old 0.7521 | New 0.1649
+2026-08-10 00:25:32.573 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:25:32.573 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:25:32.573 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.4204 Old: 0.4316 New: 0.4147
+2026-08-10 00:25:32.574 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:25:32.575 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:25:32.575 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.4204 Old: 0.4316 New: 0.4147
+2026-08-10 00:25:32.576 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:25:36.767 | INFO     | __main__:train:332 - Epoch: [2][0/46]	 loss 3.85030	 cls_loss: 0.3688 cluster_loss: 1.5421 distance sup_con_loss: 3.1648 distance contrastive_loss: 2.9358 angle sup_con_loss: 1.3952 angle contrastive_loss: 3.4247 patch_sup_con_loss: 0.0000 
+2026-08-10 00:25:55.079 | INFO     | __main__:train:332 - Epoch: [2][10/46]	 loss 3.66926	 cls_loss: 0.3371 cluster_loss: 1.3783 distance sup_con_loss: 2.7564 distance contrastive_loss: 2.9455 angle sup_con_loss: 1.2515 angle contrastive_loss: 3.4061 patch_sup_con_loss: 0.0000 
+2026-08-10 00:26:13.429 | INFO     | __main__:train:332 - Epoch: [2][20/46]	 loss 3.44666	 cls_loss: 0.1477 cluster_loss: 1.2855 distance sup_con_loss: 2.6283 distance contrastive_loss: 2.9187 angle sup_con_loss: 0.9957 angle contrastive_loss: 3.3953 patch_sup_con_loss: 0.0000 
+2026-08-10 00:26:31.795 | INFO     | __main__:train:332 - Epoch: [2][30/46]	 loss 3.43912	 cls_loss: 0.2167 cluster_loss: 1.3530 distance sup_con_loss: 1.8197 distance contrastive_loss: 2.8967 angle sup_con_loss: 0.8078 angle contrastive_loss: 3.3855 patch_sup_con_loss: 0.0000 
+2026-08-10 00:26:50.167 | INFO     | __main__:train:332 - Epoch: [2][40/46]	 loss 3.57243	 cls_loss: 0.2506 cluster_loss: 1.3275 distance sup_con_loss: 2.6899 distance contrastive_loss: 2.9301 angle sup_con_loss: 1.1650 angle contrastive_loss: 3.4010 patch_sup_con_loss: 0.0000 
+[E002] pre  n=2989  conf 0.539(0.16/0.94) H=1.88 effK=   6.5 acc_H 0.455/0.552/0.405 dir_old 0.863
+        pair inst=19833  pairs=607107    pos= 1.16% prec 0.298 base 0.0057 lift   52.3 rec 0.608 pconf 0.510/0.409
+        gate thr=0.79 pass= 24.9% prec 0.628 pos= 1.27% | logit |z|max 0.88 std 0.19 L2 2.68 range 1.36
+2026-08-10 00:26:59.281 | INFO     | __main__:train:334 - Train Epoch: 2 Avg Loss: 3.6492 
+2026-08-10 00:26:59.282 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:27:21.087 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 2, Train ACC Unlabelled_v2: All 0.5113 | Old 0.5577 | New 0.4882
+2026-08-10 00:27:21.094 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 2, Train ACC Unlabelled_v2b: All 0.5247 | Old 0.5612 | New 0.4882
+2026-08-10 00:27:21.111 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:27:48.538 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 2, Test ACC_v2: All 0.5452 | Old 0.8141 | New 0.2787
+2026-08-10 00:27:48.546 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 2, Test ACC_v2b: All 0.5458 | Old 0.8143 | New 0.2772
+2026-08-10 00:27:48.565 | INFO     | __main__:train:345 - Train Accuracies: All 0.5113 | Old 0.5577 | New 0.4882
+2026-08-10 00:27:48.565 | INFO     | __main__:train:346 - Test Accuracies: All 0.5452 | Old 0.8141 | New 0.2787
+2026-08-10 00:27:48.567 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:27:48.567 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:27:48.567 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.5113 Old: 0.5577 New: 0.4882
+2026-08-10 00:27:48.568 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:27:48.569 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:27:48.569 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.5113 Old: 0.5577 New: 0.4882
+2026-08-10 00:27:48.570 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:27:52.828 | INFO     | __main__:train:332 - Epoch: [3][0/46]	 loss 3.58845	 cls_loss: 0.2908 cluster_loss: 1.3038 distance sup_con_loss: 2.9200 distance contrastive_loss: 2.8718 angle sup_con_loss: 1.2389 angle contrastive_loss: 3.3853 patch_sup_con_loss: 0.0000 
+2026-08-10 00:28:11.126 | INFO     | __main__:train:332 - Epoch: [3][10/46]	 loss 3.38996	 cls_loss: 0.2000 cluster_loss: 1.3658 distance sup_con_loss: 1.6160 distance contrastive_loss: 2.8563 angle sup_con_loss: 0.6784 angle contrastive_loss: 3.3769 patch_sup_con_loss: 0.0000 
+2026-08-10 00:28:29.443 | INFO     | __main__:train:332 - Epoch: [3][20/46]	 loss 3.54131	 cls_loss: 0.2754 cluster_loss: 1.3624 distance sup_con_loss: 2.4887 distance contrastive_loss: 2.9013 angle sup_con_loss: 1.0172 angle contrastive_loss: 3.3836 patch_sup_con_loss: 0.0000 
+2026-08-10 00:28:47.758 | INFO     | __main__:train:332 - Epoch: [3][30/46]	 loss 3.38712	 cls_loss: 0.1984 cluster_loss: 1.3333 distance sup_con_loss: 1.7944 distance contrastive_loss: 2.8867 angle sup_con_loss: 0.7300 angle contrastive_loss: 3.3761 patch_sup_con_loss: 0.0000 
+2026-08-10 00:29:06.064 | INFO     | __main__:train:332 - Epoch: [3][40/46]	 loss 3.36881	 cls_loss: 0.1685 cluster_loss: 1.1884 distance sup_con_loss: 2.5443 distance contrastive_loss: 2.8175 angle sup_con_loss: 1.0109 angle contrastive_loss: 3.3536 patch_sup_con_loss: 0.0000 
+[E003] pre  n=2944  conf 0.568(0.21/0.95) H=1.62 effK=   5.0 acc_H 0.489/0.719/0.365 dir_old 0.874
+        pair inst=19569  pairs=590516    pos= 1.02% prec 0.340 base 0.0055 lift   61.3 rec 0.624 pconf 0.563/0.466
+        gate thr=0.78 pass= 28.5% prec 0.606 pos= 1.76% | logit |z|max 0.94 std 0.19 L2 2.70 range 1.41
+2026-08-10 00:29:15.135 | INFO     | __main__:train:334 - Train Epoch: 3 Avg Loss: 3.4643 
+2026-08-10 00:29:15.136 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:29:36.879 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 3, Train ACC Unlabelled_v2: All 0.5307 | Old 0.5650 | New 0.5135
+2026-08-10 00:29:36.886 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 3, Train ACC Unlabelled_v2b: All 0.5437 | Old 0.5743 | New 0.5130
+2026-08-10 00:29:36.903 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:30:04.279 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 3, Test ACC_v2: All 0.5759 | Old 0.8072 | New 0.3467
+2026-08-10 00:30:04.286 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 3, Test ACC_v2b: All 0.5711 | Old 0.7983 | New 0.3439
+2026-08-10 00:30:04.305 | INFO     | __main__:train:345 - Train Accuracies: All 0.5307 | Old 0.5650 | New 0.5135
+2026-08-10 00:30:04.305 | INFO     | __main__:train:346 - Test Accuracies: All 0.5759 | Old 0.8072 | New 0.3467
+2026-08-10 00:30:04.307 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:30:04.307 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:30:04.307 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.5307 Old: 0.5650 New: 0.5135
+2026-08-10 00:30:04.308 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:30:08.512 | INFO     | __main__:train:332 - Epoch: [4][0/46]	 loss 3.28068	 cls_loss: 0.1573 cluster_loss: 1.2063 distance sup_con_loss: 1.8187 distance contrastive_loss: 2.8131 angle sup_con_loss: 0.7562 angle contrastive_loss: 3.3481 patch_sup_con_loss: 0.0000 
+2026-08-10 00:30:26.808 | INFO     | __main__:train:332 - Epoch: [4][10/46]	 loss 3.45247	 cls_loss: 0.2460 cluster_loss: 1.2866 distance sup_con_loss: 2.4282 distance contrastive_loss: 2.8266 angle sup_con_loss: 0.9864 angle contrastive_loss: 3.3551 patch_sup_con_loss: 0.0000 
+2026-08-10 00:30:45.116 | INFO     | __main__:train:332 - Epoch: [4][20/46]	 loss 3.38582	 cls_loss: 0.1978 cluster_loss: 1.3018 distance sup_con_loss: 2.2503 distance contrastive_loss: 2.8260 angle sup_con_loss: 0.8149 angle contrastive_loss: 3.3558 patch_sup_con_loss: 0.0000 
+2026-08-10 00:31:03.425 | INFO     | __main__:train:332 - Epoch: [4][30/46]	 loss 3.20045	 cls_loss: 0.2129 cluster_loss: 1.1433 distance sup_con_loss: 1.3924 distance contrastive_loss: 2.7967 angle sup_con_loss: 0.6169 angle contrastive_loss: 3.3367 patch_sup_con_loss: 0.0000 
+2026-08-10 00:31:21.734 | INFO     | __main__:train:332 - Epoch: [4][40/46]	 loss 3.18041	 cls_loss: 0.2067 cluster_loss: 1.1451 distance sup_con_loss: 1.3262 distance contrastive_loss: 2.8278 angle sup_con_loss: 0.5605 angle contrastive_loss: 3.3371 patch_sup_con_loss: 0.0000 
+[E004] pre  n=2931  conf 0.596(0.26/0.95) H=1.49 effK=   4.4 acc_H 0.524/0.693/0.433 dir_old 0.865
+        pair inst=19493  pairs=586579    pos= 0.93% prec 0.369 base 0.0056 lift   66.2 rec 0.618 pconf 0.590/0.491
+        gate thr=0.78 pass= 31.6% prec 0.589 pos= 1.42% | logit |z|max 0.95 std 0.19 L2 2.65 range 1.40
+2026-08-10 00:31:30.830 | INFO     | __main__:train:334 - Train Epoch: 4 Avg Loss: 3.3678 
+2026-08-10 00:31:30.830 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:31:52.599 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 4, Train ACC Unlabelled_v2: All 0.5609 | Old 0.6278 | New 0.5275
+2026-08-10 00:31:52.606 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 4, Train ACC Unlabelled_v2b: All 0.5784 | Old 0.6293 | New 0.5275
+2026-08-10 00:31:52.623 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:32:20.056 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 4, Test ACC_v2: All 0.5911 | Old 0.8367 | New 0.3478
+2026-08-10 00:32:20.063 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 4, Test ACC_v2b: All 0.5882 | Old 0.8299 | New 0.3465
+2026-08-10 00:32:20.082 | INFO     | __main__:train:345 - Train Accuracies: All 0.5609 | Old 0.6278 | New 0.5275
+2026-08-10 00:32:20.082 | INFO     | __main__:train:346 - Test Accuracies: All 0.5911 | Old 0.8367 | New 0.3478
+2026-08-10 00:32:20.084 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:32:20.084 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:32:20.084 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.5609 Old: 0.6278 New: 0.5275
+2026-08-10 00:32:20.085 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:32:20.085 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:32:20.086 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.5609 Old: 0.6278 New: 0.5275
+2026-08-10 00:32:20.087 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:32:24.270 | INFO     | __main__:train:332 - Epoch: [5][0/46]	 loss 3.26421	 cls_loss: 0.1774 cluster_loss: 1.1877 distance sup_con_loss: 1.7698 distance contrastive_loss: 2.8059 angle sup_con_loss: 0.7449 angle contrastive_loss: 3.3369 patch_sup_con_loss: 0.0000 
+2026-08-10 00:32:42.598 | INFO     | __main__:train:332 - Epoch: [5][10/46]	 loss 3.21799	 cls_loss: 0.1415 cluster_loss: 1.1968 distance sup_con_loss: 1.5714 distance contrastive_loss: 2.7956 angle sup_con_loss: 0.6408 angle contrastive_loss: 3.3339 patch_sup_con_loss: 0.0000 
+2026-08-10 00:33:00.965 | INFO     | __main__:train:332 - Epoch: [5][20/46]	 loss 3.38327	 cls_loss: 0.2322 cluster_loss: 1.2160 distance sup_con_loss: 2.5527 distance contrastive_loss: 2.8027 angle sup_con_loss: 0.9805 angle contrastive_loss: 3.3263 patch_sup_con_loss: 0.0000 
+2026-08-10 00:33:19.345 | INFO     | __main__:train:332 - Epoch: [5][30/46]	 loss 3.40857	 cls_loss: 0.1684 cluster_loss: 1.3006 distance sup_con_loss: 2.0984 distance contrastive_loss: 2.8527 angle sup_con_loss: 0.8653 angle contrastive_loss: 3.3828 patch_sup_con_loss: 0.0000 
+2026-08-10 00:33:37.724 | INFO     | __main__:train:332 - Epoch: [5][40/46]	 loss 3.40692	 cls_loss: 0.1521 cluster_loss: 1.2169 distance sup_con_loss: 2.6359 distance contrastive_loss: 2.8004 angle sup_con_loss: 1.1216 angle contrastive_loss: 3.3301 patch_sup_con_loss: 0.0000 
+[E005] pre  n=2974  conf 0.601(0.27/0.95) H=1.49 effK=   4.4 acc_H 0.551/0.716/0.469 dir_old 0.877
+        pair inst=19767  pairs=602626    pos= 0.89% prec 0.386 base 0.0056 lift   68.7 rec 0.610 pconf 0.590/0.492
+        gate thr=0.77 pass= 31.6% prec 0.716 pos= 1.34% | logit |z|max 0.95 std 0.18 L2 2.61 range 1.41
+2026-08-10 00:33:46.826 | INFO     | __main__:train:334 - Train Epoch: 5 Avg Loss: 3.3240 
+2026-08-10 00:33:46.826 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:34:08.599 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 5, Train ACC Unlabelled_v2: All 0.5603 | Old 0.6144 | New 0.5332
+2026-08-10 00:34:08.606 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 5, Train ACC Unlabelled_v2b: All 0.5793 | Old 0.6257 | New 0.5330
+2026-08-10 00:34:08.623 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:34:36.048 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 5, Test ACC_v2: All 0.6044 | Old 0.8585 | New 0.3526
+2026-08-10 00:34:36.056 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 5, Test ACC_v2b: All 0.6003 | Old 0.8543 | New 0.3463
+2026-08-10 00:34:36.074 | INFO     | __main__:train:345 - Train Accuracies: All 0.5603 | Old 0.6144 | New 0.5332
+2026-08-10 00:34:36.075 | INFO     | __main__:train:346 - Test Accuracies: All 0.6044 | Old 0.8585 | New 0.3526
+2026-08-10 00:34:36.076 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:34:36.076 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:34:36.077 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.5603 Old: 0.6144 New: 0.5332
+2026-08-10 00:34:36.078 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:34:40.244 | INFO     | __main__:train:332 - Epoch: [6][0/46]	 loss 3.47021	 cls_loss: 0.1967 cluster_loss: 1.1789 distance sup_con_loss: 3.0037 distance contrastive_loss: 2.7873 angle sup_con_loss: 1.3165 angle contrastive_loss: 3.3324 patch_sup_con_loss: 0.0000 
+2026-08-10 00:34:58.552 | INFO     | __main__:train:332 - Epoch: [6][10/46]	 loss 3.22126	 cls_loss: 0.1245 cluster_loss: 1.1219 distance sup_con_loss: 2.0533 distance contrastive_loss: 2.7680 angle sup_con_loss: 0.8179 angle contrastive_loss: 3.3226 patch_sup_con_loss: 0.0000 
+2026-08-10 00:35:16.852 | INFO     | __main__:train:332 - Epoch: [6][20/46]	 loss 3.27239	 cls_loss: 0.1178 cluster_loss: 1.1970 distance sup_con_loss: 1.8204 distance contrastive_loss: 2.8218 angle sup_con_loss: 0.7909 angle contrastive_loss: 3.3471 patch_sup_con_loss: 0.0000 
+2026-08-10 00:35:35.169 | INFO     | __main__:train:332 - Epoch: [6][30/46]	 loss 3.35325	 cls_loss: 0.1372 cluster_loss: 1.2715 distance sup_con_loss: 1.9938 distance contrastive_loss: 2.8190 angle sup_con_loss: 0.8576 angle contrastive_loss: 3.3489 patch_sup_con_loss: 0.0000 
+2026-08-10 00:35:53.519 | INFO     | __main__:train:332 - Epoch: [6][40/46]	 loss 3.23980	 cls_loss: 0.0873 cluster_loss: 1.1770 distance sup_con_loss: 1.9670 distance contrastive_loss: 2.7832 angle sup_con_loss: 0.8027 angle contrastive_loss: 3.3251 patch_sup_con_loss: 0.0000 
+[E006] pre  n=2944  conf 0.613(0.27/0.95) H=1.45 effK=   4.3 acc_H 0.558/0.774/0.448 dir_old 0.887
+        pair inst=19616  pairs=594433    pos= 0.85% prec 0.380 base 0.0055 lift   69.6 rec 0.589 pconf 0.604/0.512
+        gate thr=0.77 pass= 34.6% prec 0.632 pos= 1.36% | logit |z|max 0.95 std 0.18 L2 2.59 range 1.41
+2026-08-10 00:36:02.609 | INFO     | __main__:train:334 - Train Epoch: 6 Avg Loss: 3.2541 
+2026-08-10 00:36:02.610 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:36:24.368 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 6, Train ACC Unlabelled_v2: All 0.5743 | Old 0.6925 | New 0.5152
+2026-08-10 00:36:24.375 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 6, Train ACC Unlabelled_v2b: All 0.6072 | Old 0.6991 | New 0.5152
+2026-08-10 00:36:24.392 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:36:51.771 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 6, Test ACC_v2: All 0.6227 | Old 0.8752 | New 0.3725
+2026-08-10 00:36:51.779 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 6, Test ACC_v2b: All 0.6228 | Old 0.8724 | New 0.3732
+2026-08-10 00:36:51.797 | INFO     | __main__:train:345 - Train Accuracies: All 0.5743 | Old 0.6925 | New 0.5152
+2026-08-10 00:36:51.797 | INFO     | __main__:train:346 - Test Accuracies: All 0.6227 | Old 0.8752 | New 0.3725
+2026-08-10 00:36:51.799 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:36:51.799 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:36:51.799 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.5743 Old: 0.6925 New: 0.5152
+2026-08-10 00:36:51.800 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:36:51.801 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:36:51.801 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.5743 Old: 0.6925 New: 0.5152
+2026-08-10 00:36:51.802 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:36:56.062 | INFO     | __main__:train:332 - Epoch: [7][0/46]	 loss 3.17343	 cls_loss: 0.0860 cluster_loss: 1.0824 distance sup_con_loss: 2.0649 distance contrastive_loss: 2.7429 angle sup_con_loss: 0.8353 angle contrastive_loss: 3.2995 patch_sup_con_loss: 0.0000 
+2026-08-10 00:37:14.392 | INFO     | __main__:train:332 - Epoch: [7][10/46]	 loss 3.21779	 cls_loss: 0.1102 cluster_loss: 1.0943 distance sup_con_loss: 2.0577 distance contrastive_loss: 2.7807 angle sup_con_loss: 0.8554 angle contrastive_loss: 3.3323 patch_sup_con_loss: 0.0000 
+2026-08-10 00:37:32.724 | INFO     | __main__:train:332 - Epoch: [7][20/46]	 loss 3.17972	 cls_loss: 0.0797 cluster_loss: 1.1194 distance sup_con_loss: 1.8449 distance contrastive_loss: 2.7842 angle sup_con_loss: 0.7503 angle contrastive_loss: 3.3235 patch_sup_con_loss: 0.0000 
+2026-08-10 00:37:51.065 | INFO     | __main__:train:332 - Epoch: [7][30/46]	 loss 3.04903	 cls_loss: 0.1220 cluster_loss: 1.1482 distance sup_con_loss: 0.8917 distance contrastive_loss: 2.7376 angle sup_con_loss: 0.3475 angle contrastive_loss: 3.3006 patch_sup_con_loss: 0.0000 
+2026-08-10 00:38:09.428 | INFO     | __main__:train:332 - Epoch: [7][40/46]	 loss 3.10652	 cls_loss: 0.0922 cluster_loss: 1.0646 distance sup_con_loss: 1.7203 distance contrastive_loss: 2.7195 angle sup_con_loss: 0.7013 angle contrastive_loss: 3.2882 patch_sup_con_loss: 0.0000 
+[E007] pre  n=2974  conf 0.620(0.28/0.96) H=1.40 effK=   4.1 acc_H 0.568/0.758/0.473 dir_old 0.871
+        pair inst=19728  pairs=601489    pos= 0.81% prec 0.414 base 0.0054 lift   76.9 rec 0.626 pconf 0.605/0.519
+        gate thr=0.77 pass= 35.8% prec 0.706 pos= 1.25% | logit |z|max 0.96 std 0.18 L2 2.58 range 1.43
+2026-08-10 00:38:18.536 | INFO     | __main__:train:334 - Train Epoch: 7 Avg Loss: 3.1896 
+2026-08-10 00:38:18.536 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:38:40.340 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 7, Train ACC Unlabelled_v2: All 0.6063 | Old 0.7238 | New 0.5475
+2026-08-10 00:38:40.347 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 7, Train ACC Unlabelled_v2b: All 0.6380 | Old 0.7283 | New 0.5477
+2026-08-10 00:38:40.364 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:39:07.864 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 7, Test ACC_v2: All 0.6486 | Old 0.8502 | New 0.4488
+2026-08-10 00:39:07.872 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 7, Test ACC_v2b: All 0.6482 | Old 0.8491 | New 0.4473
+2026-08-10 00:39:07.890 | INFO     | __main__:train:345 - Train Accuracies: All 0.6063 | Old 0.7238 | New 0.5475
+2026-08-10 00:39:07.890 | INFO     | __main__:train:346 - Test Accuracies: All 0.6486 | Old 0.8502 | New 0.4488
+2026-08-10 00:39:07.892 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:39:07.892 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:39:07.892 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6063 Old: 0.7238 New: 0.5475
+2026-08-10 00:39:07.893 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:39:12.018 | INFO     | __main__:train:332 - Epoch: [8][0/46]	 loss 3.27408	 cls_loss: 0.1227 cluster_loss: 1.2586 distance sup_con_loss: 1.5627 distance contrastive_loss: 2.7985 angle sup_con_loss: 0.6950 angle contrastive_loss: 3.3415 patch_sup_con_loss: 0.0000 
+2026-08-10 00:39:30.392 | INFO     | __main__:train:332 - Epoch: [8][10/46]	 loss 3.29196	 cls_loss: 0.0981 cluster_loss: 1.1675 distance sup_con_loss: 2.0837 distance contrastive_loss: 2.7456 angle sup_con_loss: 0.9750 angle contrastive_loss: 3.3181 patch_sup_con_loss: 0.0000 
+2026-08-10 00:39:48.785 | INFO     | __main__:train:332 - Epoch: [8][20/46]	 loss 3.16584	 cls_loss: 0.0757 cluster_loss: 1.1250 distance sup_con_loss: 1.7591 distance contrastive_loss: 2.7448 angle sup_con_loss: 0.7604 angle contrastive_loss: 3.2959 patch_sup_con_loss: 0.0000 
+2026-08-10 00:40:07.184 | INFO     | __main__:train:332 - Epoch: [8][30/46]	 loss 3.09809	 cls_loss: 0.1346 cluster_loss: 1.0909 distance sup_con_loss: 1.4415 distance contrastive_loss: 2.7170 angle sup_con_loss: 0.6093 angle contrastive_loss: 3.2800 patch_sup_con_loss: 0.0000 
+2026-08-10 00:40:25.559 | INFO     | __main__:train:332 - Epoch: [8][40/46]	 loss 3.08801	 cls_loss: 0.0966 cluster_loss: 1.0283 distance sup_con_loss: 1.7165 distance contrastive_loss: 2.7176 angle sup_con_loss: 0.7067 angle contrastive_loss: 3.2913 patch_sup_con_loss: 0.0000 
+[E008] pre  n=2974  conf 0.646(0.31/0.97) H=1.29 effK=   3.6 acc_H 0.593/0.750/0.510 dir_old 0.874
+        pair inst=19737  pairs=600707    pos= 0.80% prec 0.462 base 0.0057 lift   81.2 rec 0.652 pconf 0.634/0.551
+        gate thr=0.76 pass= 39.4% prec 0.678 pos= 1.16% | logit |z|max 0.98 std 0.18 L2 2.57 range 1.48
+2026-08-10 00:40:34.676 | INFO     | __main__:train:334 - Train Epoch: 8 Avg Loss: 3.1340 
+2026-08-10 00:40:34.676 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:40:56.488 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 8, Train ACC Unlabelled_v2: All 0.5919 | Old 0.7051 | New 0.5352
+2026-08-10 00:40:56.495 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 8, Train ACC Unlabelled_v2b: All 0.6223 | Old 0.7094 | New 0.5352
+2026-08-10 00:40:56.512 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:41:23.923 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 8, Test ACC_v2: All 0.6412 | Old 0.8658 | New 0.4186
+2026-08-10 00:41:23.930 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 8, Test ACC_v2b: All 0.6420 | Old 0.8681 | New 0.4159
+2026-08-10 00:41:23.949 | INFO     | __main__:train:345 - Train Accuracies: All 0.5919 | Old 0.7051 | New 0.5352
+2026-08-10 00:41:23.949 | INFO     | __main__:train:346 - Test Accuracies: All 0.6412 | Old 0.8658 | New 0.4186
+2026-08-10 00:41:23.951 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:41:28.135 | INFO     | __main__:train:332 - Epoch: [9][0/46]	 loss 2.97786	 cls_loss: 0.0655 cluster_loss: 0.9722 distance sup_con_loss: 1.4572 distance contrastive_loss: 2.6902 angle sup_con_loss: 0.5696 angle contrastive_loss: 3.2723 patch_sup_con_loss: 0.0000 
+2026-08-10 00:41:46.436 | INFO     | __main__:train:332 - Epoch: [9][10/46]	 loss 3.09737	 cls_loss: 0.1402 cluster_loss: 1.0379 distance sup_con_loss: 1.5500 distance contrastive_loss: 2.7148 angle sup_con_loss: 0.6865 angle contrastive_loss: 3.2876 patch_sup_con_loss: 0.0000 
+2026-08-10 00:42:04.756 | INFO     | __main__:train:332 - Epoch: [9][20/46]	 loss 3.10447	 cls_loss: 0.1108 cluster_loss: 1.0543 distance sup_con_loss: 1.7452 distance contrastive_loss: 2.6821 angle sup_con_loss: 0.7438 angle contrastive_loss: 3.2637 patch_sup_con_loss: 0.0000 
+2026-08-10 00:42:23.075 | INFO     | __main__:train:332 - Epoch: [9][30/46]	 loss 3.22005	 cls_loss: 0.0909 cluster_loss: 1.0686 distance sup_con_loss: 2.3492 distance contrastive_loss: 2.7314 angle sup_con_loss: 1.0151 angle contrastive_loss: 3.2814 patch_sup_con_loss: 0.0000 
+2026-08-10 00:42:41.391 | INFO     | __main__:train:332 - Epoch: [9][40/46]	 loss 3.05124	 cls_loss: 0.0763 cluster_loss: 1.0474 distance sup_con_loss: 1.2379 distance contrastive_loss: 2.7030 angle sup_con_loss: 0.6109 angle contrastive_loss: 3.2892 patch_sup_con_loss: 0.0000 
+[E009] pre  n=2876  conf 0.652(0.32/0.96) H=1.28 effK=   3.6 acc_H 0.598/0.780/0.500 dir_old 0.875
+        pair inst=19082  pairs=561152    pos= 0.78% prec 0.455 base 0.0057 lift   79.2 rec 0.619 pconf 0.645/0.552
+        gate thr=0.75 pass= 40.6% prec 0.723 pos= 1.07% | logit |z|max 0.96 std 0.18 L2 2.52 range 1.46
+2026-08-10 00:42:50.474 | INFO     | __main__:train:334 - Train Epoch: 9 Avg Loss: 3.1208 
+2026-08-10 00:42:50.474 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:43:12.285 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 9, Train ACC Unlabelled_v2: All 0.6203 | Old 0.7738 | New 0.5435
+2026-08-10 00:43:12.292 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 9, Train ACC Unlabelled_v2b: All 0.6600 | Old 0.7765 | New 0.5435
+2026-08-10 00:43:12.309 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:43:39.711 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 9, Test ACC_v2: All 0.6647 | Old 0.8852 | New 0.4460
+2026-08-10 00:43:39.719 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 9, Test ACC_v2b: All 0.6662 | Old 0.8867 | New 0.4458
+2026-08-10 00:43:39.738 | INFO     | __main__:train:345 - Train Accuracies: All 0.6203 | Old 0.7738 | New 0.5435
+2026-08-10 00:43:39.738 | INFO     | __main__:train:346 - Test Accuracies: All 0.6647 | Old 0.8852 | New 0.4460
+2026-08-10 00:43:39.740 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:43:39.740 | INFO     | __main__:train:357 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:43:39.740 | INFO     | __main__:train:358 - Metrics with best model on test set: All: 0.6203 Old: 0.7738 New: 0.5435
+2026-08-10 00:43:39.741 | INFO     | __main__:train:362 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best.pt.
+2026-08-10 00:43:39.742 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:43:39.742 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6203 Old: 0.7738 New: 0.5435
+2026-08-10 00:43:39.743 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:43:43.791 | INFO     | __main__:train:332 - Epoch: [10][0/46]	 loss 3.06000	 cls_loss: 0.0904 cluster_loss: 1.0869 distance sup_con_loss: 1.2792 distance contrastive_loss: 2.7117 angle sup_con_loss: 0.5110 angle contrastive_loss: 3.3070 patch_sup_con_loss: 0.0000 
+2026-08-10 00:44:02.103 | INFO     | __main__:train:332 - Epoch: [10][10/46]	 loss 3.19150	 cls_loss: 0.0952 cluster_loss: 1.0643 distance sup_con_loss: 2.2300 distance contrastive_loss: 2.6900 angle sup_con_loss: 0.9371 angle contrastive_loss: 3.2843 patch_sup_con_loss: 0.0000 
+2026-08-10 00:44:20.455 | INFO     | __main__:train:332 - Epoch: [10][20/46]	 loss 3.25194	 cls_loss: 0.1132 cluster_loss: 1.1823 distance sup_con_loss: 1.9571 distance contrastive_loss: 2.7513 angle sup_con_loss: 0.8229 angle contrastive_loss: 3.3140 patch_sup_con_loss: 0.0000 
+2026-08-10 00:44:38.817 | INFO     | __main__:train:332 - Epoch: [10][30/46]	 loss 3.13038	 cls_loss: 0.1004 cluster_loss: 1.0940 distance sup_con_loss: 1.4987 distance contrastive_loss: 2.7080 angle sup_con_loss: 0.7306 angle contrastive_loss: 3.2835 patch_sup_con_loss: 0.0000 
+2026-08-10 00:44:57.190 | INFO     | __main__:train:332 - Epoch: [10][40/46]	 loss 3.06270	 cls_loss: 0.0780 cluster_loss: 1.0239 distance sup_con_loss: 1.4097 distance contrastive_loss: 2.7171 angle sup_con_loss: 0.6573 angle contrastive_loss: 3.3019 patch_sup_con_loss: 0.0000 
+[E010] pre  n=2918  conf 0.658(0.32/0.97) H=1.27 effK=   3.6 acc_H 0.599/0.790/0.513 dir_old 0.876
+        pair inst=19347  pairs=576523    pos= 0.79% prec 0.458 base 0.0060 lift   76.9 rec 0.607 pconf 0.660/0.569
+        gate thr=0.75 pass= 42.8% prec 0.651 pos= 1.12% | logit |z|max 0.97 std 0.18 L2 2.52 range 1.45
+2026-08-10 00:45:06.309 | INFO     | __main__:train:334 - Train Epoch: 10 Avg Loss: 3.0973 
+2026-08-10 00:45:06.309 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:45:28.193 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 10, Train ACC Unlabelled_v2: All 0.6266 | Old 0.7565 | New 0.5616
+2026-08-10 00:45:28.200 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 10, Train ACC Unlabelled_v2b: All 0.6609 | Old 0.7603 | New 0.5615
+2026-08-10 00:45:28.215 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:45:55.724 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 10, Test ACC_v2: All 0.6710 | Old 0.8696 | New 0.4742
+2026-08-10 00:45:55.732 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 10, Test ACC_v2b: All 0.6721 | Old 0.8718 | New 0.4724
+2026-08-10 00:45:55.749 | INFO     | __main__:train:345 - Train Accuracies: All 0.6266 | Old 0.7565 | New 0.5616
+2026-08-10 00:45:55.749 | INFO     | __main__:train:346 - Test Accuracies: All 0.6710 | Old 0.8696 | New 0.4742
+2026-08-10 00:45:55.751 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:45:55.751 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:45:55.751 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6266 Old: 0.7565 New: 0.5616
+2026-08-10 00:45:55.752 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:45:59.964 | INFO     | __main__:train:332 - Epoch: [11][0/46]	 loss 3.12416	 cls_loss: 0.1005 cluster_loss: 1.0287 distance sup_con_loss: 1.8423 distance contrastive_loss: 2.7510 angle sup_con_loss: 0.7697 angle contrastive_loss: 3.3079 patch_sup_con_loss: 0.0000 
+2026-08-10 00:46:18.267 | INFO     | __main__:train:332 - Epoch: [11][10/46]	 loss 2.96238	 cls_loss: 0.0849 cluster_loss: 1.0017 distance sup_con_loss: 1.0244 distance contrastive_loss: 2.6756 angle sup_con_loss: 0.4705 angle contrastive_loss: 3.2748 patch_sup_con_loss: 0.0000 
+2026-08-10 00:46:36.569 | INFO     | __main__:train:332 - Epoch: [11][20/46]	 loss 2.96955	 cls_loss: 0.1041 cluster_loss: 1.0014 distance sup_con_loss: 1.2911 distance contrastive_loss: 2.7026 angle sup_con_loss: 0.4707 angle contrastive_loss: 3.2649 patch_sup_con_loss: 0.0000 
+2026-08-10 00:46:54.891 | INFO     | __main__:train:332 - Epoch: [11][30/46]	 loss 3.09742	 cls_loss: 0.0602 cluster_loss: 1.0065 distance sup_con_loss: 1.7720 distance contrastive_loss: 2.6963 angle sup_con_loss: 0.8248 angle contrastive_loss: 3.2871 patch_sup_con_loss: 0.0000 
+2026-08-10 00:47:13.225 | INFO     | __main__:train:332 - Epoch: [11][40/46]	 loss 3.15194	 cls_loss: 0.0573 cluster_loss: 1.0450 distance sup_con_loss: 2.0000 distance contrastive_loss: 2.6827 angle sup_con_loss: 0.9389 angle contrastive_loss: 3.2686 patch_sup_con_loss: 0.0000 
+[E011] pre  n=2939  conf 0.652(0.31/0.96) H=1.30 effK=   3.7 acc_H 0.602/0.763/0.524 dir_old 0.846
+        pair inst=19518  pairs=588034    pos= 0.75% prec 0.449 base 0.0054 lift   82.4 rec 0.618 pconf 0.628/0.534
+        gate thr=0.75 pass= 41.8% prec 0.740 pos= 0.90% | logit |z|max 0.96 std 0.18 L2 2.51 range 1.44
+2026-08-10 00:47:22.351 | INFO     | __main__:train:334 - Train Epoch: 11 Avg Loss: 3.0718 
+2026-08-10 00:47:22.352 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:47:44.137 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 11, Train ACC Unlabelled_v2: All 0.6321 | Old 0.7792 | New 0.5586
+2026-08-10 00:47:44.143 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 11, Train ACC Unlabelled_v2b: All 0.6681 | Old 0.7776 | New 0.5587
+2026-08-10 00:47:44.160 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:48:11.577 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 11, Test ACC_v2: All 0.6710 | Old 0.8686 | New 0.4753
+2026-08-10 00:48:11.585 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 11, Test ACC_v2b: All 0.6708 | Old 0.8693 | New 0.4722
+2026-08-10 00:48:11.603 | INFO     | __main__:train:345 - Train Accuracies: All 0.6321 | Old 0.7792 | New 0.5586
+2026-08-10 00:48:11.603 | INFO     | __main__:train:346 - Test Accuracies: All 0.6710 | Old 0.8686 | New 0.4753
+2026-08-10 00:48:11.604 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:48:11.605 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:48:11.605 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6321 Old: 0.7792 New: 0.5586
+2026-08-10 00:48:11.606 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:48:15.708 | INFO     | __main__:train:332 - Epoch: [12][0/46]	 loss 3.15037	 cls_loss: 0.1370 cluster_loss: 1.0692 distance sup_con_loss: 1.5426 distance contrastive_loss: 2.6984 angle sup_con_loss: 0.8088 angle contrastive_loss: 3.2804 patch_sup_con_loss: 0.0000 
+2026-08-10 00:48:34.030 | INFO     | __main__:train:332 - Epoch: [12][10/46]	 loss 3.05469	 cls_loss: 0.0657 cluster_loss: 0.9863 distance sup_con_loss: 1.6961 distance contrastive_loss: 2.6916 angle sup_con_loss: 0.7634 angle contrastive_loss: 3.2719 patch_sup_con_loss: 0.0000 
+2026-08-10 00:48:52.381 | INFO     | __main__:train:332 - Epoch: [12][20/46]	 loss 3.03378	 cls_loss: 0.0470 cluster_loss: 1.0816 distance sup_con_loss: 1.1707 distance contrastive_loss: 2.7017 angle sup_con_loss: 0.5370 angle contrastive_loss: 3.2872 patch_sup_con_loss: 0.0000 
+2026-08-10 00:49:10.746 | INFO     | __main__:train:332 - Epoch: [12][30/46]	 loss 3.00004	 cls_loss: 0.0632 cluster_loss: 0.9640 distance sup_con_loss: 1.6100 distance contrastive_loss: 2.6613 angle sup_con_loss: 0.6820 angle contrastive_loss: 3.2563 patch_sup_con_loss: 0.0000 
+2026-08-10 00:49:29.117 | INFO     | __main__:train:332 - Epoch: [12][40/46]	 loss 3.18860	 cls_loss: 0.0639 cluster_loss: 1.0814 distance sup_con_loss: 1.9951 distance contrastive_loss: 2.7165 angle sup_con_loss: 0.9271 angle contrastive_loss: 3.2904 patch_sup_con_loss: 0.0000 
+[E012] pre  n=2949  conf 0.675(0.33/0.97) H=1.19 effK=   3.3 acc_H 0.615/0.781/0.533 dir_old 0.867
+        pair inst=19620  pairs=592554    pos= 0.77% prec 0.496 base 0.0058 lift   85.4 rec 0.660 pconf 0.670/0.584
+        gate thr=0.74 pass= 45.7% prec 0.733 pos= 1.05% | logit |z|max 0.99 std 0.18 L2 2.53 range 1.46
+2026-08-10 00:49:38.230 | INFO     | __main__:train:334 - Train Epoch: 12 Avg Loss: 3.0595 
+2026-08-10 00:49:38.231 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:50:00.044 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 12, Train ACC Unlabelled_v2: All 0.6283 | Old 0.7438 | New 0.5706
+2026-08-10 00:50:00.051 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 12, Train ACC Unlabelled_v2b: All 0.6608 | Old 0.7510 | New 0.5706
+2026-08-10 00:50:00.067 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:50:27.542 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 12, Test ACC_v2: All 0.6664 | Old 0.8440 | New 0.4904
+2026-08-10 00:50:27.550 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 12, Test ACC_v2b: All 0.6672 | Old 0.8442 | New 0.4901
+2026-08-10 00:50:27.567 | INFO     | __main__:train:345 - Train Accuracies: All 0.6283 | Old 0.7438 | New 0.5706
+2026-08-10 00:50:27.568 | INFO     | __main__:train:346 - Test Accuracies: All 0.6664 | Old 0.8440 | New 0.4904
+2026-08-10 00:50:27.569 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:50:31.726 | INFO     | __main__:train:332 - Epoch: [13][0/46]	 loss 3.01444	 cls_loss: 0.0663 cluster_loss: 1.0627 distance sup_con_loss: 1.1504 distance contrastive_loss: 2.6976 angle sup_con_loss: 0.5220 angle contrastive_loss: 3.2749 patch_sup_con_loss: 0.0000 
+2026-08-10 00:50:50.090 | INFO     | __main__:train:332 - Epoch: [13][10/46]	 loss 2.99244	 cls_loss: 0.1418 cluster_loss: 0.9467 distance sup_con_loss: 1.2438 distance contrastive_loss: 2.7256 angle sup_con_loss: 0.5894 angle contrastive_loss: 3.2773 patch_sup_con_loss: 0.0000 
+2026-08-10 00:51:08.457 | INFO     | __main__:train:332 - Epoch: [13][20/46]	 loss 3.08981	 cls_loss: 0.0862 cluster_loss: 1.0787 distance sup_con_loss: 1.3295 distance contrastive_loss: 2.7267 angle sup_con_loss: 0.6465 angle contrastive_loss: 3.2942 patch_sup_con_loss: 0.0000 
+2026-08-10 00:51:26.841 | INFO     | __main__:train:332 - Epoch: [13][30/46]	 loss 3.01265	 cls_loss: 0.0914 cluster_loss: 1.0077 distance sup_con_loss: 1.5368 distance contrastive_loss: 2.6678 angle sup_con_loss: 0.5989 angle contrastive_loss: 3.2616 patch_sup_con_loss: 0.0000 
+2026-08-10 00:51:45.209 | INFO     | __main__:train:332 - Epoch: [13][40/46]	 loss 2.95689	 cls_loss: 0.0520 cluster_loss: 0.9892 distance sup_con_loss: 1.1670 distance contrastive_loss: 2.6598 angle sup_con_loss: 0.5387 angle contrastive_loss: 3.2602 patch_sup_con_loss: 0.0000 
+[E013] pre  n=2911  conf 0.681(0.35/0.97) H=1.19 effK=   3.3 acc_H 0.637/0.773/0.565 dir_old 0.861
+        pair inst=19290  pairs=573395    pos= 0.74% prec 0.497 base 0.0054 lift   91.4 rec 0.673 pconf 0.673/0.595
+        gate thr=0.73 pass= 46.3% prec 0.703 pos= 0.99% | logit |z|max 0.97 std 0.18 L2 2.49 range 1.46
+2026-08-10 00:51:54.320 | INFO     | __main__:train:334 - Train Epoch: 13 Avg Loss: 3.0372 
+2026-08-10 00:51:54.321 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:52:16.114 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 13, Train ACC Unlabelled_v2: All 0.6495 | Old 0.7518 | New 0.5983
+2026-08-10 00:52:16.121 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 13, Train ACC Unlabelled_v2b: All 0.6766 | Old 0.7547 | New 0.5984
+2026-08-10 00:52:16.137 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:52:43.538 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 13, Test ACC_v2: All 0.6842 | Old 0.8512 | New 0.5186
+2026-08-10 00:52:43.546 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 13, Test ACC_v2b: All 0.6845 | Old 0.8491 | New 0.5200
+2026-08-10 00:52:43.564 | INFO     | __main__:train:345 - Train Accuracies: All 0.6495 | Old 0.7518 | New 0.5983
+2026-08-10 00:52:43.564 | INFO     | __main__:train:346 - Test Accuracies: All 0.6842 | Old 0.8512 | New 0.5186
+2026-08-10 00:52:43.566 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:52:43.566 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:52:43.566 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6495 Old: 0.7518 New: 0.5983
+2026-08-10 00:52:43.568 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:52:47.787 | INFO     | __main__:train:332 - Epoch: [14][0/46]	 loss 2.87553	 cls_loss: 0.0811 cluster_loss: 0.9177 distance sup_con_loss: 0.8962 distance contrastive_loss: 2.6594 angle sup_con_loss: 0.4150 angle contrastive_loss: 3.2650 patch_sup_con_loss: 0.0000 
+2026-08-10 00:53:06.121 | INFO     | __main__:train:332 - Epoch: [14][10/46]	 loss 3.13647	 cls_loss: 0.0751 cluster_loss: 1.0577 distance sup_con_loss: 1.9953 distance contrastive_loss: 2.6839 angle sup_con_loss: 0.8505 angle contrastive_loss: 3.2667 patch_sup_con_loss: 0.0000 
+2026-08-10 00:53:24.476 | INFO     | __main__:train:332 - Epoch: [14][20/46]	 loss 2.93390	 cls_loss: 0.0727 cluster_loss: 0.9773 distance sup_con_loss: 1.0952 distance contrastive_loss: 2.6525 angle sup_con_loss: 0.4813 angle contrastive_loss: 3.2588 patch_sup_con_loss: 0.0000 
+2026-08-10 00:53:42.847 | INFO     | __main__:train:332 - Epoch: [14][30/46]	 loss 3.05136	 cls_loss: 0.0613 cluster_loss: 0.9925 distance sup_con_loss: 1.6425 distance contrastive_loss: 2.7013 angle sup_con_loss: 0.7186 angle contrastive_loss: 3.2888 patch_sup_con_loss: 0.0000 
+2026-08-10 00:54:01.239 | INFO     | __main__:train:332 - Epoch: [14][40/46]	 loss 3.06483	 cls_loss: 0.0683 cluster_loss: 0.9790 distance sup_con_loss: 1.5810 distance contrastive_loss: 2.6997 angle sup_con_loss: 0.8203 angle contrastive_loss: 3.2696 patch_sup_con_loss: 0.0000 
+[E014] pre  n=2941  conf 0.683(0.36/0.96) H=1.17 effK=   3.2 acc_H 0.639/0.787/0.563 dir_old 0.874
+        pair inst=19531  pairs=588176    pos= 0.75% prec 0.536 base 0.0060 lift   89.4 rec 0.671 pconf 0.664/0.579
+        gate thr=0.73 pass= 47.6% prec 0.737 pos= 0.94% | logit |z|max 0.97 std 0.18 L2 2.50 range 1.45
+2026-08-10 00:54:10.352 | INFO     | __main__:train:334 - Train Epoch: 14 Avg Loss: 2.9804 
+2026-08-10 00:54:10.353 | INFO     | __main__:train:340 - Testing on unlabelled examples in the training data...
+2026-08-10 00:54:32.158 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 14, Train ACC Unlabelled_v2: All 0.6497 | Old 0.7658 | New 0.5916
+2026-08-10 00:54:32.165 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 14, Train ACC Unlabelled_v2b: All 0.6784 | Old 0.7652 | New 0.5916
+2026-08-10 00:54:32.182 | INFO     | __main__:train:342 - Testing on disjoint test set...
+2026-08-10 00:54:59.628 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2 at 0x7f4caaf4f670>, Epoch 14, Test ACC_v2: All 0.6950 | Old 0.8762 | New 0.5155
+2026-08-10 00:54:59.636 | INFO     | util.cluster_and_log_utils:log_accs_from_preds:226 - EVAL FUNCTION: <function split_cluster_acc_v2_balanced at 0x7f4caaf4f700>, Epoch 14, Test ACC_v2b: All 0.6964 | Old 0.8774 | New 0.5154
+2026-08-10 00:54:59.655 | INFO     | __main__:train:345 - Train Accuracies: All 0.6497 | Old 0.7658 | New 0.5916
+2026-08-10 00:54:59.655 | INFO     | __main__:train:346 - Test Accuracies: All 0.6950 | Old 0.8762 | New 0.5155
+2026-08-10 00:54:59.657 | INFO     | __main__:train:350 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model.pt.
+2026-08-10 00:54:59.657 | INFO     | __main__:train:372 - Exp Name: DIAG_PART_SIGNAL_E50R
+2026-08-10 00:54:59.658 | INFO     | __main__:train:373 - Metrics with best (train all-acc) model: All: 0.6497 Old: 0.7658 New: 0.5916
+2026-08-10 00:54:59.659 | INFO     | __main__:train:377 - model saved to /data/projects/clean_projects/hab/dev_outputs/HypSimGCD_cub/log/DIAG_PART_SIGNAL_E50R_(10.08.2026_|_40.913)/checkpoints/model_best_acc_all.pt.
+2026-08-10 00:55:03.896 | INFO     | __main__:train:332 - Epoch: [15][0/46]	 loss 3.01165	 cls_loss: 0.0473 cluster_loss: 0.9632 distance sup_con_loss: 1.4434 distance contrastive_loss: 2.6551 angle sup_con_loss: 0.7414 angle contrastive_loss: 3.2639 patch_sup_con_loss: 0.0000 
