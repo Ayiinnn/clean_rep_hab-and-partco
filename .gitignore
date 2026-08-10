@@ -1,3 +1,5 @@
 /diagnosis/out
 /hab/dev_outputs
 /partco/dev_outputs
+__pycache__/
+*.pyc

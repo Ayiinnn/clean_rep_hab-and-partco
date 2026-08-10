@@ -1,0 +1,60 @@
+
+===== epoch 0 ============================================
+                    partco_E50R     hab_E50R
+sharp conf(pre)          0.1992       0.3747
+sharp effK(pre)           60.83        17.96
+sharp margin             0.1165       0.2518
+logit |z|max             0.4462       0.6362
+logit std               0.09298       0.1386
+label acc_H all          0.2973       0.3047
+label acc_H old          0.3706        0.406
+label acc_H new          0.2599       0.2551
+label uniq clusters          130          117
+pair prec                0.1139       0.1324
+pair base               0.00542      0.00577
+pair lift                 21.01        22.95
+pair pos%                 2.599        2.651
+pair conf                0.1459       0.2976
+gate pass%               0.3082        8.967
+post-gate prec                1       0.4261
+post-gate conf           0.8588       0.9239
+
+===== epoch 25 ============================================
+                    partco_E50R     hab_E50R
+sharp conf(pre)          0.5143         0.74
+sharp effK(pre)           7.955        3.076
+sharp margin             0.3712        0.631
+logit |z|max             0.7816        0.928
+logit std                0.1491       0.1624
+label acc_H all          0.7261       0.6986
+label acc_H old          0.8427       0.7805
+label acc_H new          0.6688       0.6591
+label uniq clusters          195          189
+pair prec                0.6043       0.5377
+pair base              0.005723     0.005597
+pair lift                 105.6        96.07
+pair pos%                0.6661        0.725
+pair conf                0.4994       0.7306
+gate pass%                 14.8        65.56
+post-gate prec                1       0.7116
+post-gate conf           0.7645       0.8649
+
+===== epoch 49 ============================================
+                    partco_E50R     hab_E50R
+sharp conf(pre)          0.5606       0.7507
+sharp effK(pre)           9.743        3.815
+sharp margin             0.4717       0.6785
+logit |z|max             0.7587       0.8728
+logit std                0.1422       0.1351
+label acc_H all          0.7363       0.7442
+label acc_H old          0.7912       0.7913
+label acc_H new          0.7096       0.7215
+label uniq clusters          193          184
+pair prec                0.5887       0.5888
+pair base              0.005432     0.005993
+pair lift                 108.4        98.24
+pair pos%                0.6599       0.7717
+pair conf                0.5571       0.7331
+gate pass%                56.42        85.38
+post-gate prec            0.659       0.6503
+post-gate conf           0.6427       0.7918
